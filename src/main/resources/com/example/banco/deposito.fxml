@@ -7,10 +7,10 @@
    <children>
       <Label layoutX="203.0" layoutY="51.0" text="Ingrese la cantidad que desea depositar" />
       <Label layoutX="198.0" layoutY="306.0" text="Saldo Actual: " />
-      <Label fx:id="saldo" layoutX="342.0" layoutY="306.0" prefHeight="17.0" prefWidth="96.0" text="quita este texto" />
+      <Label fx:id="saldoLabel" layoutX="342.0" layoutY="306.0" prefHeight="17.0" prefWidth="96.0" text="quita este texto" />
       <TextField fx:id="txtCantidad" layoutX="234.0" layoutY="109.0" promptText="00.00" />
-      <Button layoutX="274.0" layoutY="188.0" mnemonicParsing="false" text="Depositar" />
-      <Button fx:id="regresar" layoutX="492.0" layoutY="345.0" mnemonicParsing="false" text="Regresar" />
-      <Label fx:id="resultadoDeposito" layoutX="286.0" layoutY="256.0" text="Resultado qet" />
+      <Button fx:id="btnDeposito" layoutX="274.0" layoutY="188.0" mnemonicParsing="false" onAction="#deposito" text="Depositar" />
+      <Button fx:id="regresar" layoutX="492.0" layoutY="345.0" mnemonicParsing="false" onAction="#salir" text="Regresar" />
+      <Label fx:id="resultadoDeposito" layoutX="286.0" layoutY="256.0" text="Resultado" visible="false" />
    </children>
 </AnchorPane>
