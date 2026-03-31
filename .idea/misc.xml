@@ -8,7 +8,11 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" languageLevel="JDK_26" default="true" project-jdk-name="liberica-full-26" project-jdk-type="JavaSDK">
+=======
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_25" default="true" project-jdk-name="25" project-jdk-type="JavaSDK">
+>>>>>>> 44b45d1e209ae30e1d3bfadf9f7787668a5f4e35
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
