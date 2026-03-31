@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="15.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.banco.BancoController">
+    <padding>
+        <Insets bottom="30.0" left="50.0" right="50.0" top="30.0"/>
+    </padding>
+
+    <Label text="Menú del Banco" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <Button text="Consultar Saldo" onAction="#onConsultarSaldo" prefWidth="200"/>
+    <Button text="Depositar"       onAction="#onDepositar"      prefWidth="200"/>
+    <Button text="Retirar"         onAction="#onRetirar"        prefWidth="200"/>
+    <Button text="Salir"           onAction="#onSalir"          prefWidth="200"/>
+
+    <Label fx:id="mensajeLabel" style="-fx-font-size: 13px;" text=""/>
+</VBox>
