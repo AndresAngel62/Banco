@@ -65,6 +65,6 @@ public class DepositoController {
     @FXML
     protected void salir (){
         FXMLLoader loader = new FXMLLoader(getClass().getResource("banco-view.fxml"));
-        
+
     }
 }
