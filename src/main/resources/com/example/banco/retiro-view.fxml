@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0" >
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.banco.RetiroController">
+   <children>
+      <Pane layoutX="11.0" layoutY="3.0" prefHeight="392.0" prefWidth="578.0">
+         <children>
+            <Label layoutX="275.0" layoutY="56.0" text="Ingrese la cantidad a retirar" />
+            <TextField fx:id="txtCantidad" layoutX="201.0" layoutY="102.0" />
+            <Button fx:id="btnRetiro" layoutX="249.0" layoutY="171.0" mnemonicParsing="false" text="Retirar" />
+            <Label fx:id="resultadoRetiro" layoutX="275.0" layoutY="240.0" text="Resultado qet" />
+            <Label layoutX="140.0" layoutY="286.0" text="El saldo actual es: " />
+            <Label fx:id="txtSaldo" layoutX="336.0" layoutY="286.0" text="Saldo qet" />
+            <Button fx:id="btnRegresar" layoutX="464.0" layoutY="335.0" mnemonicParsing="false" onAction="#salir" text="Regresar" />
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>
