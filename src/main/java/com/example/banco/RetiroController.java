@@ -2,7 +2,7 @@ package com.example.banco;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -23,38 +23,36 @@ public class RetiroController {
     private Label txtSaldo;
 
     @FXML
-    private double cantidadRetiro;
+    public void initialize() {
+        txtSaldo.setText(String.format("Saldo actual: $%.2f", SesionBanco.getSaldo()));
+    }
 
     @FXML
     protected void retiro() {
-
-        cantidadRetiro = Double.parseDouble(String.valueOf(this.txtCantidad.getText()));
-
-
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("retiro-view.fxml"));
-        if (cantidadRetiro > 0 && ) {
-            try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("Deposito.fxml"));
-                Parent root = (Parent) loader.load();
-
-                saldo = saldo - cantidadRetiro;
-
-
+        try {
+            double cantidadRetiro = Double.parseDouble(txtCantidad.getText());
+            if (cantidadRetiro > 0 && cantidadRetiro <= SesionBanco.getSaldo()) {
+                SesionBanco.retirar(cantidadRetiro);
+                txtSaldo.setText(String.format("Saldo actual: $%.2f", SesionBanco.getSaldo()));
                 resultadoRetiro.setVisible(true);
                 resultadoRetiro.setText("Retiro exitoso");
-
-            } catch (IOException e) {
-                e.printStackTrace();
-
+            } else {
                 resultadoRetiro.setVisible(true);
-                resultadoRetiro.setText("Error: Cantidad no válida");
+                resultadoRetiro.setText("Error: Cantidad no válida o saldo insuficiente");
             }
-
+        } catch (NumberFormatException e) {
+            resultadoRetiro.setVisible(true);
+            resultadoRetiro.setText("Error: Cantidad no válida");
         }
     }
 
     @FXML
-    protected void salir () {
+    protected void salir() throws IOException {
+        Stage stage = (Stage) btnRetiro.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("banco-view.fxml"));
+        Scene scene = new Scene(loader.load());
+        stage.setScene(scene);
+        stage.setTitle("Menú Principal");
+        stage.show();
     }
 }
