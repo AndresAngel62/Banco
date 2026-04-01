@@ -11,7 +11,7 @@
             <Font name="Corbel Bold" size="14.0" />
          </font></Label>
       <Label layoutX="198.0" layoutY="306.0" text="Saldo Actual: " />
-      <Label fx:id="saldoLabel" layoutX="342.0" layoutY="306.0" prefHeight="17.0" prefWidth="96.0" text="quita este texto" />
+      <Label fx:id="saldoLabel" layoutX="342.0" layoutY="306.0" prefHeight="17.0" prefWidth="96.0" text="" />
       <TextField fx:id="txtCantidad" layoutX="234.0" layoutY="109.0" promptText="00.00" />
       <Button fx:id="btnDeposito" layoutX="274.0" layoutY="188.0" mnemonicParsing="false" onAction="#deposito" text="Depositar" />
       <Button fx:id="regresar" layoutX="492.0" layoutY="345.0" mnemonicParsing="false" onAction="#salir" text="Regresar" />
