@@ -18,13 +18,13 @@ public class ConsultaController {
 
     @FXML
     public void initialize() {
-        lblSaldo.setText(String.format("Saldo actual:git", SesionBanco.getSaldo()));
+        lblSaldo.setText(String.format("Saldo actual: $%.2f", SesionBanco.getSaldo()));
     }
 
     @FXML
     protected void onRegresarClick() throws IOException {
         Stage stage = (Stage) btnRegresar.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("menu.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("banco-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
         stage.setTitle("Menú Principal");
