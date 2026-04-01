@@ -17,11 +17,11 @@
 
     <Label text="Consulta de Saldo">
         <font>
-            <Font name="System Bold" size="22.0"/>
+            <Font name="System Bold" size="22"/>
         </font>
     </Label>
 
-    <Label fx:id="lblSaldo" text="Saldo actual: $0.00">
+    <Label fx:id="lblSaldo" text="Saldo actual: $0">
         <font>
             <Font size="18.0"/>
         </font>
