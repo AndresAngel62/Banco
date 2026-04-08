@@ -4,17 +4,17 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.banco.DepositoController">
+<AnchorPane prefHeight="257.0" prefWidth="561.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.banco.DepositoController">
    <children>
-      <Label layoutX="203.0" layoutY="51.0" text="Ingrese la cantidad que desea depositar" textAlignment="CENTER">
+      <Label layoutX="53.0" layoutY="33.0" text="Ingrese la cantidad que desea depositar" textAlignment="CENTER" textFill="#29a9a9">
          <font>
-            <Font name="Corbel Bold" size="14.0" />
+            <Font name="Corbel Bold" size="28.0" />
          </font></Label>
-      <Label layoutX="198.0" layoutY="306.0" text="Saldo Actual: " />
+      <Label layoutX="77.0" layoutY="161.0" text="Saldo Actual: " textFill="#ac2f2f" />
       <Label fx:id="saldoLabel" layoutX="342.0" layoutY="306.0" prefHeight="17.0" prefWidth="96.0" text="" />
-      <TextField fx:id="txtCantidad" layoutX="234.0" layoutY="109.0" promptText="00.00" />
-      <Button fx:id="btnDeposito" layoutX="274.0" layoutY="188.0" mnemonicParsing="false" onAction="#deposito" text="Depositar" />
-      <Button fx:id="regresar" layoutX="492.0" layoutY="345.0" mnemonicParsing="false" onAction="#salir" text="Regresar" />
+      <TextField fx:id="txtCantidad" layoutX="216.0" layoutY="93.0" promptText="00.00" />
+      <Button fx:id="btnDeposito" layoutX="404.0" layoutY="93.0" mnemonicParsing="false" onAction="#deposito" text="Depositar" textFill="#ac2f2f" />
+      <Button fx:id="regresar" layoutX="81.0" layoutY="217.0" mnemonicParsing="false" onAction="#salir" text="Regresar" textFill="#ac2f2f" />
       <Label fx:id="resultadoDeposito" layoutX="286.0" layoutY="256.0" text="Resultado" visible="false" />
    </children>
 </AnchorPane>
