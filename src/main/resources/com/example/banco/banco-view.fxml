@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="15.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.banco.BancoController">
+<VBox alignment="CENTER" spacing="15.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="com.example.banco.BancoController">
     <padding>
-        <Insets bottom="30.0" left="50.0" right="50.0" top="30.0"/>
+        <Insets bottom="30.0" left="50.0" right="50.0" top="30.0" />
     </padding>
 
-    <Label text="Menú del Banco" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+    <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Menú del Banco" textAlignment="CENTER" textFill="#6e2626" />
 
-    <Button text="Consultar Saldo" onAction="#onConsultarSaldo" prefWidth="200"/>
-    <Button text="Depositar"       onAction="#onDepositar"      prefWidth="200"/>
-    <Button text="Retirar"         onAction="#onRetirar"        prefWidth="200"/>
-    <Button text="Salir"           onAction="#onSalir"          prefWidth="200"/>
+    <Button onAction="#onConsultarSaldo" prefWidth="200" text="Consultar Saldo" textFill="#4c00ffba" />
+    <Button onAction="#onDepositar" prefWidth="200" text="Depositar" textFill="#f600ff" />
+    <Button onAction="#onRetirar" prefWidth="200" text="Retirar" textFill="#0080ff" />
+    <Button onAction="#onSalir" prefWidth="200" text="Salir" />
 
-    <Label fx:id="mensajeLabel" style="-fx-font-size: 13px;" text=""/>
+    <Label fx:id="mensajeLabel" style="-fx-font-size: 13px;" text="" />
 </VBox>
