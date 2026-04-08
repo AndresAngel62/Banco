@@ -7,7 +7,7 @@
    <children>
       <Pane layoutX="11.0" layoutY="3.0" prefHeight="392.0" prefWidth="578.0">
          <children>
-            <Label layoutX="275.0" layoutY="56.0" text="Ingrese la cantidad a retirar" />
+            <Label layoutX="129.0" layoutY="51.0" text="Ingrese la cantidad a retirar" />
             <TextField fx:id="txtCantidad" layoutX="201.0" layoutY="102.0" />
             <Button fx:id="btnRetiro" layoutX="249.0" layoutY="171.0" mnemonicParsing="false" onAction="#retiro" text="Retirar" />
             <Label fx:id="resultadoRetiro" layoutX="275.0" layoutY="240.0" text="" visible="false" />
